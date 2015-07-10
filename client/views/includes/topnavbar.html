@@ -16,17 +16,25 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                      <a href="#">About</a>
                     </li>
                     <li>
                       <a href="#">Services</a>
                     </li>
-                    <li>
-                      <a href="/login">hard coded login</a>
-                    </li>
-                    <li>
-                      <a href="{{pathFor 'login' }}">Login</a>
-                    </li>
+                    {{#if currentUser}}
+                      <li>
+                        <a href="{{pathFor 'geargrindsSubmitForm' }}">Create a Grind</a>
+                      </li>
+                    {{/if}}
+                    {{#if currentUser}}
+                      <li>
+                        <a href="/logout">Logout</a>
+                      </li>
+                    {{else}}
+                      <li>
+                        <a href="{{pathFor 'login' }}">Login</a>
+                      </li>
+                    {{/if}}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
