@@ -2,7 +2,10 @@
   <h2>
     <a href="#">{{title}}</a>
   </h2>
+  
+
   <p class="lead"> by <a href="index.php">{{author}}</a></p>
+    {{#if isYourGrind}} <a href="{{pathFor 'grindEdit'}}">Edit Grind</a>{{/if}}
   <p><span class="glyphicon glyphicon-time"></span> Posted on {{createdAt}}</p>
   <hr>
 </template>

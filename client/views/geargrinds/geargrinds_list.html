@@ -1,47 +1,19 @@
 <template name="geargrindsList">
-
-<body>
-
-    {{> topnavbar }}
-
     <!-- Page Content -->
     <div class="container">
-
         <div class="row">
-
             <!-- Blog Entries Column -->
             <div class="col-md-12">
-
-                <h1 class="page-header">
-                    Gear Grinding Complaints
-                    
-                </h1>
-
+                <h1 class="page-header">Gear Grinding Complaints</h1>
                 <!-- First Blog Post -->
                
               {{#each geargrinds }}
                 {{> geargrindItem}}
               {{/each}}
-
-                
-
-
-
             </div>
-
-
-
         </div>
         <!-- /.row -->
-
         <hr>
-
-{{> footer }}
-
     </div>
     <!-- /.container -->
-
-
-</body>
-
 </template>

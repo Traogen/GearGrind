@@ -11,7 +11,6 @@ Template.geargrindsSubmitForm.events({
       if(error){
         return alert(error.reason);
       }
-      
       Router.go('/');
     });
   }
